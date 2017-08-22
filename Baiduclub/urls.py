@@ -29,22 +29,25 @@ def get_data():
     dict1 = []
     dict2 = []
     dict3 = []
-    if len(ClubIntro.objects.all()) % 2 == 1:
-        dict3.append(ClubIntro.objects.all().order_by('-id')[0])
+    # if len(ClubIntro.objects.all()) % 2 == 1:
+    #     dict3.append(ClubIntro.objects.all().order_by('-id')[0])
     for i in ClubIntro.objects.all():
-        if i.id % 2 == 1:
+        if i.id % 3 == 0:
             dict1.append(i)
-        else:
+        elif i.id % 3 == 1:
             dict2.append(i)
+        else:
+            dict3.append(i)
 
     return {
         "post": Post.objects.all().order_by("-date")[:6],
         "user": UserProfile.objects.all(),
         "group": Group.objects.all(),
-        "another": dict3,
+        # "another": dict3,
         "about": [
-            dict1,
             dict2,
+            dict3,
+            dict1
         ],
     }
 urlpatterns = [

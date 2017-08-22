@@ -8,7 +8,7 @@
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Baidu club</title>
+	<title>百度菁英俱乐部</title>
 	<meta name="description" content="">  
 	<meta name="author" content="">
 
@@ -67,22 +67,22 @@
          	</a>         
 
 	         <ul id="nav" class="nav">
-	            <li class="current"><a class="smoothscroll" href="#hero">Home.</a></li>
-		         <li><a class="smoothscroll" href="#portfolio">Groups.</a></li>
-	            <li><a class="smoothscroll" href="#about">About.</a></li>
-	            <li><a class="smoothscroll" href="#journal">Blog.</a></li>	            
-	            <li><a class="smoothscroll" href="#contact">Contact.</a></li>
+	            <li class="current"><a class="smoothscroll" href="#hero">主页</a></li>
+		         <li><a class="smoothscroll" href="#portfolio">组别</a></li>
+	            <li><a class="smoothscroll" href="#about">关于</a></li>
+	            <li><a class="smoothscroll" href="#journal">任务</a></li>	            
+	            <li><a class="smoothscroll" href="#contact">加入我们</a></li>
                  {% if not request.user.is_authenticated %}
                      <li><form style="margin-bottom: 0px;" action="/account/auth/" method="post">{% csrf_token %}
                          <li style="">
                              <input maxlength="254" name="username" id="username" style="width: 90px; height: 44px; border-top-width: 3px; margin-bottom: 0px; padding-top: 12px; display: inline;" type="text" class=""/>
                              <input name="password" id="password" style="width: 90px; height: 44px; padding-top: 12px; border-top-width: 3px; margin-bottom: 0px; display: inline;" type="password" class=""></li>
-                         <li><button type="submit" class="button grey">Login</button></li>
+                         <li><button type="submit" class="button grey">登录</button></li>
                      </form></li>
 
                  {% endif %}
                  {% if request.user.is_authenticated %}
-                     <li><a href="/account/logout">Logout.</a></li>
+                     <li><a href="/account/logout">退出登录</a></li>
                  {% endif %}
 	         </ul> 
 
@@ -108,24 +108,24 @@
 					   <!-- Slide -->
 					   <li>
 						   <div class="flex-caption">
-								<h1>Hello,  Here is Baidu club. We make awesome and stunning digital stuff.</h1>
-								<p><a class="button stroke smoothscroll" href="#about">More About Us</a></p>
+								<h1>Hello，这里是百度俱乐部，我们专注于编写优雅的代码、开发实用的软件</h1>
+								<p><a class="button stroke smoothscroll" href="#about">了解我们</a></p>
 							</div>						
 					   </li>
 
 					   <!-- Slide -->
 					   <li>						
 							<div class="flex-caption">
-								<h1 >We imagine, craft and manage your brand in this new digital world.</h1>
-								<p><a class="button stroke smoothscroll" href="#portfolio">See Our Works</a></p>
+								<h1 >在二进制的时代，我们沉醉于0、1交错的世界，想象、创造、经营我们自己的品牌</h1>
+								<p><a class="button stroke smoothscroll" href="#portfolio">我们的分组</a></p>
 							</div>					
 					   </li>
 
 					   <!-- Slide -->
 					   <li>
 						   <div class="flex-caption">
-								<h1 >Take a look at some of <a class="smoothscroll" href="#portfolio" title="">our groups</a> or <a class="smoothscroll" href="#contact" title="">contact us</a> to discuss how I can help you.</h1>
-								<p><a class="button stroke smoothscroll" href="#contact">Get In Touch</a></p>										   
+								<h1 >了解一下<a class="smoothscroll" href="#portfolio" title="">我们的小组</a>，或者<a class="smoothscroll" href="#contact" title="">联系我们</a>，了解我们能怎样帮助你，我们期待你的加入</h1>
+								<p><a class="button stroke smoothscroll" href="#contact">加入我们</a></p>										   
 							</div>
 					   </li>					              
 
@@ -148,11 +148,11 @@
 
       	<div class="twelve columns">
 
-	         <a href="/group"><h1>Our groups<span>.</span></h1></a>
+	         <a href="/group"><h1>我们的小组<span>.</span></h1></a>
 
 	         <hr />
 
-	         <p>here you can see our groups!
+	         <p>这里你将看到我们的各个小组!
 	         </p>
 
 	      </div>
@@ -182,7 +182,7 @@
 
    		<div class="twelve columns">
 
-	         <h1>About Our club<span>.</span></h1>
+	         <h1>关于我们<span>.</span></h1>
 
 	         <hr />
 	      </div>
@@ -201,11 +201,11 @@
 
 	   		<div class="twelve columns">
 
-		         <h1>Our Member<span>.</span></h1>
+		         <h1>我们的成员<span>.</span></h1>
 
 		         <hr />
 
-		         <p>Here you can see our members!
+		         <p>这里你可以看到我们的成员们
 		         </p>	         
 
 		      </div>
@@ -262,7 +262,7 @@
 
 	   	<div class="twelve columns">
 
-			   <a href="/blog"><h1>Our Latest Blogs<span>.</span></h1></a>
+			   <a href="/blog"><h1>我们的最新任务<span>.</span></h1></a>
 
 			   <hr />
 
@@ -297,7 +297,7 @@
 
    		<div class="twelve columns">
 
-	         <h1>Get In Touch With Us<span>.</span></h1>
+	         <h1>加入我们<span>.</span></h1>
 
 	         <hr />
 
@@ -319,17 +319,17 @@
                   <div class="row">	             
 	                  <div class="six columns mob-whole">	
 	                  	<label for="contactLname">Name <span class="required">*</span></label>      						   
-	      					<input name="contactLname" type="text" id="contactLname" placeholder="Name" value="" />	      					
+	      					<input name="contactLname" type="text" id="contactLname" placeholder="姓名*" value="" />	      					
 	                  </div>
                       <div style="color: #ffff00">
-                          <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Choose a group↓</h1>
+                          <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;选择属于你的小组↓</h1>
                           </div>
                   </div>
 
                   <div class="row">
                       <div class="six columns mob-whole">
 	                  	<label for="contactEmail">Email <span class="required">*</span></label>
-	      					<input name="contactEmail" type="text" id="contactEmail" placeholder="Email" value="" />
+	      					<input name="contactEmail" type="text" id="contactEmail" placeholder="邮箱*" value="" />
 	                  </div>
 
 	                  <div class="six columns mob-whole">	
@@ -348,13 +348,13 @@
 
 	                  <div class="twelve columns">
 	                     <label  for="contactMessage">Message <span class="required">*</span></label>
-	                     <textarea name="contactMessage"  id="contactMessage" placeholder="About Yourself" rows="10" cols="50" ></textarea>
+	                     <textarea name="contactMessage"  id="contactMessage" placeholder="自我介绍" rows="10" cols="50" ></textarea>
 	                  </div>
 
                   </div>
 
                   <div>
-                     <button class="submit full-width">Send Message</button>
+                     <button class="submit full-width">提交信息</button>
                      <div id="image-loader">
                         <img src="{% static "images/loader.gif" %}" alt="" />
                      </div>
@@ -367,7 +367,7 @@
             <!-- message box -->
             <div id="message-warning"></div>
             <div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br />
+               <i class="fa fa-check"></i>信息提交成功，感谢您的关注！<br />
     			</div>
 
          </div> <!-- /contact-form -->      	

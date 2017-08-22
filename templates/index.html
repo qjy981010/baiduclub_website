@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block about %}
-    {% for a,b in object_list.about %}
+    {% for a,b,c in object_list.about %}
         <div class="row about-content">
-       <div class="mob-whole six columns left">
+        <div class="mob-whole six columns left">
 
       		<h3>{{ a.aspect }}</h3>
 
@@ -15,6 +15,12 @@
 
 	      	<p>{{ b.content }}</p>
       	</div>
+        <div class="mob-whole six columns right">
+
+            <h3>{{ c.aspect }}</h3>
+  
+            <p>{{ c.content }}</p>
+        </div>
         </div>
     {% endfor %}
     {% for a in object_list.another %}
