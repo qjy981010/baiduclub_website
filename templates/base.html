@@ -70,7 +70,7 @@
 	            <li class="current"><a class="smoothscroll" href="#hero">主页</a></li>
 		         <li><a class="smoothscroll" href="#portfolio">组别</a></li>
 	            <li><a class="smoothscroll" href="#about">关于</a></li>
-	            <li><a class="smoothscroll" href="#journal">任务</a></li>	            
+	            <li><a class="smoothscroll" href="#team">成员</a></li>	            
 	            <li><a class="smoothscroll" href="#contact">加入我们</a></li>
                  {% if not request.user.is_authenticated %}
                      <li><form style="margin-bottom: 0px;" action="/account/auth/" method="post">{% csrf_token %}
@@ -163,7 +163,7 @@
 
       	<div class="twelve columns">
 
-            <div id="portfolio-wrapper" class="bgrid-fourth s-bgrid-third mob-bgrid-half group">
+            <div id="portfolio-wrapper" class="bgrid-half s-bgrid-third mob-bgrid-half group">
                 {% block group %}
                 {% endblock %}
             </div> <!-- /portfolio-wrapper -->
@@ -256,6 +256,7 @@
 
    <!-- journal
    =================================================== -->
+   <!--
    <section id="journal">
 
 	   <div class="row section-head">
@@ -280,13 +281,13 @@
 	         <div id="blog-wrapper" class="bgrid-third s-bgrid-half mob-bgrid-whole group">
                  {% block blog %}
                 {% endblock %}
-	         </div> <!-- /blog-wrapper -->
+	         </div> --><!-- /blog-wrapper -->
 
-	      </div> <!-- /twelve -->
+	      <!-- </div> /twelve -->
 
-      </div> <!-- /row -->
+      <!-- </div> /row -->
 
-   </section> <!-- /blog -->
+   <!-- </section> /blog -->
 
    
    <!-- Contact Section
