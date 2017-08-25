@@ -112,6 +112,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "img"),
 )
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+
 # MEDIA_URL = '/img/'
 
 MEDIA_DIRS = (
